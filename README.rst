@@ -28,3 +28,11 @@ Note that the ASCON PRF "short" form means:
     20000 (0x004e20)  4379636c6f6e65733230323421004e20  ab4ad516d465047e
    100000 (0x0186a0)  4379636c6f6e657332303234210186a0  6b96250a86382ac7
   1000000 (0x0f4240)  4379636c6f6e657332303234210f4240  c11cdd72b7deead1
+
+::
+
+  int ret = crypto_prf(tag, 8, msg, 16, key);
+                        ^   ^        ^   
+      output -----------┘   |        └--- length of message
+      length of tag --------┘ 
+     
