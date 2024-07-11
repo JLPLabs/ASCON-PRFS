@@ -33,6 +33,6 @@ Note that the ASCON PRF "short" form means:
 
   int ret = crypto_prf(tag, 8, msg, 16, key);
                         ^   ^        ^   
-      output -----------┘   |        └--- length of message
-      length of tag --------┘ 
+       output ──────────┘   |        └─── length of message
+       length of tag ───────┘ 
      
